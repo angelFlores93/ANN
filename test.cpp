@@ -32,7 +32,27 @@ int main(){
 	for (i = 0; i < COLS; i++){
 		cout << "weight "<<i<<" = " << weights[i] << endl;
 	}
-	//francisco
+	
+	while(!correct)
+	{
+		correct = 1;
+		count++;
+		for (i = 0; i < ROWS; ++i)
+		{
+			x1 = train[i][0]; 
+			x2 = train[i][1]; 
+			weightsum = threshold * weights[0] + x1 * weights[1] + x2 * weights[2];		
+			if (weightsum > 0) out = 1;
+			else out = 0;
+			expected = train[i][2];
+			cout << "x: " << x1 << " y: " << x2 << " expected: " << expected << " calculated: " << out << endl;
+			if (out != expected) 
+			{
+				
+			}
+		}
+		cout << endl;
+	}
 	
 	cout << endl << endl;
 	cout << "Final Weights" << endl << "-------------" << endl;
