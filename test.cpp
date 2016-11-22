@@ -48,7 +48,11 @@ int main(){
 			cout << "x: " << x1 << " y: " << x2 << " expected: " << expected << " calculated: " << out << endl;
 			if (out != expected) 
 			{
-				
+				deltaw1 = learning_rate * (expected - out) * x1;
+				weights[1] = weights[1] + deltaw1;		
+				deltaw2 = learning_rate * (expected - out) * x2;
+				weights[2] = weights[2] + deltaw2;
+				correct = 0;
 			}
 		}
 		cout << endl;
